@@ -102,7 +102,7 @@ function send_data_to_server($params){
     curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
     $result = curl_exec($ch);
     curl_close($ch);
-    echo "<h3>". __("Thanks!","wp-accessibility-helper") . "</h3>";
+    echo "<h3>". __("¡Gracias!","wp-accessibility-helper") . "</h3>";
     die();
 }
 //Get admin widgets list
@@ -120,62 +120,62 @@ function wah_get_admin_widgets_list(){
     $widgetsObject = array();
     $widgetsObject["widget-1"] = array(
         "active" => 1,
-        "html"   => 'Font resize',
+        "html"   => 'Tamaño de fuente',
         "class"  => "active"
     );
     $widgetsObject["widget-2"] = array(
         "active" => $wah_keyboard_navigation_setup,
-        "html"   => 'Keyboard navigation',
+        "html"   => 'Navegación por teclado',
         "class"  => $wah_keyboard_navigation_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-3"] = array(
         "active" => $wah_readable_fonts_setup,
-        "html"   => 'Readable Font',
+        "html"   => 'Fuente legible',
         "class"  => $wah_readable_fonts_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-4"] = array(
         "active" => $contrast_setup,
-        "html"   => 'Contrast',
+        "html"   => 'Contraste',
         "class"  => $contrast_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-5"] = array(
         "active" => $underline_links_setup,
-        "html"   => 'Underline links',
+        "html"   => 'Enlaces subrayados',
         "class"  => $underline_links_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-6"] = array(
         "active" => $wah_highlight_links_enable,
-        "html"   => 'Highlight links',
+        "html"   => 'Resaltar enlaces',
         "class"  => $wah_highlight_links_enable ? "active" : "notactive"
     );
     $widgetsObject["widget-7"] = array(
         "active" => 1,
-        "html"   => 'Clear cookies',
+        "html"   => 'Eliminar caches',
         "class"  => "active"
     );
     $widgetsObject["widget-8"] = array(
         "active" => $wah_greyscale_enable,
-        "html"   => 'Image Greyscale',
+        "html"   => 'Imagen en escala de grises',
         "class"  => $wah_greyscale_enable ? "active" : "notactive"
     );
     $widgetsObject["widget-9"] = array(
         "active" => $wah_invert_enable,
-        "html"   => 'Invert colors',
+        "html"   => 'Colores invertidos',
         "class"  => $wah_invert_enable ? "active" : "notactive"
     );
     $widgetsObject["widget-10"] = array(
         "active" => $wah_remove_animations_setup,
-        "html"   => 'Remove Animations',
+        "html"   => 'Quitar animaciones',
         "class"  => $wah_remove_animations_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-11"] = array(
         "active" => $remove_styles_setup,
-        "html"   => 'Remove styles',
+        "html"   => 'Quitar estilos',
         "class"  => $remove_styles_setup ? "active" : "notactive"
     );
     $widgetsObject["widget-12"] = array(
         "active" => $wah_lights_off_setup,
-        "html"   => 'Lights Off',
+        "html"   => 'Luces apagadas',
         "class"  => $wah_lights_off_setup ? "active" : "notactive"
     );
     $wah_widgets_order = get_option('wah_sidebar_widgets_order');
@@ -217,62 +217,62 @@ function update_serialize_order_array(){
     if(!$wah_serialize_widgets){
         $widgetsObject["widget-1"] = array(
             "active" => 1,
-            "html"   => 'Font resize',
+            "html"   => 'Tamaño de fuente',
             "class"  => "active"
         );
         $widgetsObject["widget-2"] = array(
             "active" => $widgets_status['wah_keyboard_navigation_setup'],
-            "html"   => 'Keyboard navigation',
+            "html"   => 'Navegación por teclado',
             "class"  => $widgets_status['wah_keyboard_navigation_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-3"] = array(
             "active" => $widgets_status['wah_readable_fonts_setup'],
-            "html"   => 'Readable Font',
+            "html"   => 'Fuente legible',
             "class"  => $widgets_status['wah_readable_fonts_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-4"] = array(
             "active" => $widgets_status['contrast_setup'],
-            "html"   => 'Contrast',
+            "html"   => 'Contraste',
             "class"  => $widgets_status['contrast_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-5"] = array(
             "active" => $widgets_status['underline_links_setup'],
-            "html"   => 'Underline links',
+            "html"   => 'Enlaces subrayados',
             "class"  => $widgets_status['underline_links_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-6"] = array(
             "active" => $widgets_status['wah_highlight_links_enable'],
-            "html"   => 'Highlight links',
+            "html"   => 'Resaltar enlaces',
             "class"  => $widgets_status['wah_highlight_links_enable'] ? "active" : "notactive"
         );
         $widgetsObject["widget-7"] = array(
             "active" => 1,
-            "html"   => 'Clear cookies',
+            "html"   => 'Eliminar caches',
             "class"  => "active"
         );
         $widgetsObject["widget-8"] = array(
             "active" => $widgets_status['wah_greyscale_enable'],
-            "html"   => 'Image Greyscale',
+            "html"   => 'Imagen en escala de grises',
             "class"  => $widgets_status['wah_greyscale_enable'] ? "active" : "notactive"
         );
         $widgetsObject["widget-9"] = array(
             "active" => $widgets_status['wah_invert_enable'],
-            "html"   => 'Invert colors',
+            "html"   => 'Colores invertidos',
             "class"  => $widgets_status['wah_invert_enable'] ? "active" : "notactive"
         );
         $widgetsObject["widget-10"] = array(
             "active" => $widgets_status['wah_remove_animations_setup'],
-            "html"   => 'Remove Animations',
+            "html"   => 'Quitar animaciones',
             "class"  => $widgets_status['wah_remove_animations_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-11"] = array(
             "active" => $widgets_status['remove_styles_setup'],
-            "html"   => 'Remove styles',
+            "html"   => 'Quitar estilos',
             "class"  => $widgets_status['remove_styles_setup'] ? "active" : "notactive"
         );
         $widgetsObject["widget-12"] = array(
             "active" => $widgets_status['wah_lights_off_setup'],
-            "html"   => 'Lights Off',
+            "html"   => 'Luces apagadas',
             "class"  => $widgets_status['wah_lights_off_setup'] ? "active" : "notactive"
         );
     } else {
@@ -280,40 +280,40 @@ function update_serialize_order_array(){
         foreach( $wah_serialize_widgets as $serialize_id=>$wah_serialize_data ) {
             if( $serialize_id == "widget-1" ){
                 $active_status = 1;
-                $html = 'Font resize';
+                $html = 'Tamaño de fuente';
             } elseif($serialize_id == "widget-2"){
                 $active_status = $widgets_status['wah_keyboard_navigation_setup'];
-                $html = 'Keyboard navigation';
+                $html = 'Navegación por teclado';
             } elseif($serialize_id == "widget-3"){
                 $active_status = $widgets_status['wah_readable_fonts_setup'];
-                $html = 'Readable Font';
+                $html = 'Fuente legible';
             } elseif($serialize_id == "widget-4"){
                 $active_status = $widgets_status['contrast_setup'];
-                $html = 'Contrast';
+                $html = 'Contraste';
             } elseif($serialize_id == "widget-5"){
                 $active_status = $widgets_status['underline_links_setup'];
-                $html = 'Underline links';
+                $html = 'Enlaces subrayados';
             } elseif($serialize_id == "widget-6"){
                 $active_status = $widgets_status['wah_highlight_links_enable'];
-                $html = 'Highlight links';
+                $html = 'Resaltar enlaces';
             } elseif($serialize_id == "widget-7"){
                 $active_status = 1;
-                $html = 'Clear cookies';
+                $html = 'Eliminar caches';
             } elseif($serialize_id == "widget-8"){
                 $active_status = $widgets_status['wah_greyscale_enable'];
-                $html = 'Image Greyscale';
+                $html = 'Imagen en escala de grises';
             } elseif($serialize_id == "widget-9"){
                 $active_status = $widgets_status['wah_invert_enable'];
-                $html = 'Invert colors';
+                $html = 'Colores invertidos';
             } elseif($serialize_id == "widget-10"){
                 $active_status = $widgets_status['wah_remove_animations_setup'];
-                $html = 'Remove Animations';
+                $html = 'Quitar animaciones';
             } elseif($serialize_id == "widget-11"){
                 $active_status = $widgets_status['remove_styles_setup'];
-                $html = 'Remove styles';
+                $html = 'Quitar estilos';
             } elseif($serialize_id == "widget-12"){
                 $active_status = $widgets_status['wah_lights_off_setup'];
-                $html = 'Lights off';
+                $html = 'Luces apagadas';
             }
             $widgetsObject[$serialize_id] = array(
                 "active" => $active_status,
@@ -328,9 +328,9 @@ function update_serialize_order_array(){
 // Select element
 function render_select_element($label, $option, $id){
     $font_resize_options = array(
-        "rem"       => __("REM units resize","wp-accessibility-helper"),
-        "zoom"      => __("Zoom in/out page","wp-accessibility-helper"),
-        "script"    => __("Script base resize","wp-accessibility-helper")
+        "rem"       => __("Tamaño de unidades REM","wp-accessibility-helper"),
+        "zoom"      => __("Acercar / alejar la página","wp-accessibility-helper"),
+        "script"    => __("Script base de cambio de tamaño","wp-accessibility-helper")
     );
 ?>
     <div class="form_row">
@@ -349,7 +349,7 @@ function render_select_element($label, $option, $id){
     </div>
 <?php }
 //Switch element
-function render_switch_element($label, $option, $id, $on = 'On', $off = 'Off'){ ?>
+function render_switch_element($label, $option, $id, $on = 'Activo', $off = 'Desactivo'){ ?>
     <div class="form_row">
         <div class="form30">
             <label for="<?php echo $id; ?>" class="text_label"><?php echo $label; ?></label>
@@ -394,7 +394,7 @@ function render_logo_position($label,$wah_logo_top, $wah_logo_right, $wah_logo_b
                 <div class="wah-logo-controller-inner">
                 <div class="row top_row">
                     <div class="col-full-width">
-                        <div class="logo-input-label">Top</div>
+                        <div class="logo-input-label">Superior</div>
                         <div class="logo-input logo-input-top">
                             <input type="number" name="wah_logo_top" min="-2000" max="2000" value="<?php echo $wah_logo_top; ?>">
                         </div>
@@ -402,13 +402,13 @@ function render_logo_position($label,$wah_logo_top, $wah_logo_right, $wah_logo_b
                 </div>
                 <div class="row middle_row">
                     <div class="col-half">
-                        <div class="logo-input-label">Left</div>
+                        <div class="logo-input-label">Izquierda</div>
                         <div class="logo-input logo-input-left">
                             <input type="number" name="wah_logo_left" min="-2000" max="2000" value="<?php echo $wah_logo_left; ?>">
                         </div>
                     </div>
                     <div class="col-half">
-                        <div class="logo-input-label">Right</div>
+                        <div class="logo-input-label">Derecha</div>
                         <div class="logo-input logo-input-right">
                             <input type="number" name="wah_logo_right" min="-2000" max="2000" value="<?php echo $wah_logo_right; ?>">
                         </div>
@@ -416,7 +416,7 @@ function render_logo_position($label,$wah_logo_top, $wah_logo_right, $wah_logo_b
                 </div>
                 <div class="row bottom_row">
                     <div class="col-full-width">
-                        <div class="logo-input-label">Bottom</div>
+                        <div class="logo-input-label">Inferior</div>
                         <div class="logo-input logo-input-bottom">
                             <input type="number" name="wah_logo_bottom" min="-2000" max="2000" value="<?php echo $wah_logo_bottom; ?>">
                         </div>
@@ -504,12 +504,12 @@ function wah_render_admin_sidebar() {
                 <ol>
                     <li>
                         <a href="https://accessibility-helper.co.il/wp-accessibility-helper-pro-modal-windows/?from=wahfree" target="_blank">
-                            <?php _e('Accessible Modal windows','wp-accessibility-helper'); ?>
+                            <?php _e('Ventanas modales accesibles','wp-accessibility-helper'); ?>
                         </a>
                     </li>
                     <li>
                         <a href="https://accessibility-helper.co.il/video-tutorials/?video=V9wJ-aJWoN4" target="_blank">
-                            <?php _e('Accessible accordions builder','wp-accessibility-helper'); ?>
+                            <?php _e('Constructor de acordeones accesible','wp-accessibility-helper'); ?>
                         </a>
                     </li>
                     <li>
@@ -519,41 +519,41 @@ function wah_render_admin_sidebar() {
                     </li>
                     <li>
                         <a href="https://accessibility-helper.co.il/video-tutorials/?video=bVBx1Ms7Ktk" target="_blank">
-                            <?php _e('Page to page settings','wp-accessibility-helper'); ?>
+                            <?php _e('Configuración de página a página','wp-accessibility-helper'); ?>
                         </a>
                     </li>
                     <li>
                         <a href="https://accessibility-helper.co.il/docs/wpml-support/?from=wahfree" target="_blank">
-                            <?php _e('WPML Support','wp-accessibility-helper'); ?>
+                            <?php _e('Soporte WPML','wp-accessibility-helper'); ?>
                         </a>
                     </li>
                     <li>
                         <a href="https://accessibility-helper.co.il/video-tutorials/?video=lAf5FTGDykw" target="_blank">
-                            <?php _e('Sidebar layouts manager','wp-accessibility-helper'); ?>
+                            <?php _e('Administrador de diseños de barra lateral','wp-accessibility-helper'); ?>
                         </a>
                     </li>
                     <li>
                         <a href="https://accessibility-helper.co.il/wahpro-shortcodes/?from=wahfree" target="_blank">
-                            <?php _e('Shortcodes & widgets','wp-accessibility-helper'); ?>
+                            <?php _e('Códigos cortos y widgets','wp-accessibility-helper'); ?>
                         </a>
                     </li>
-                    <li><?php _e('Advanced tuning settings','wp-accessibility-helper'); ?></li>
-                    <li><?php _e('Highlight titles','wp-accessibility-helper'); ?></li>
-                    <li><?php _e('Mobile optimization','wp-accessibility-helper'); ?></li>
-                    <li><?php _e('Reset widgets order','wp-accessibility-helper'); ?></li>
-                    <li><?php _e('Buttons with icons','wp-accessibility-helper'); ?></li>
-                    <li><?php _e('No ads in admin','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('Ajustes de sintonía avanzados','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('Títulos destacados','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('Optimización móvil','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('Restablecer orden de widgets','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('Botones con iconos','wp-accessibility-helper'); ?></li>
+                    <li><?php _e('No hay anuncios en admin','wp-accessibility-helper'); ?></li>
                 </ol>
                 <div class="pro-more">
                     <p>
                         <a href="https://accessibility-helper.co.il/features-comparison/?from=wahfree" target="_blank">
-                            <strong><?php _e('Features comprasion','wp-accessibility-helper'); ?></strong>
+                            <strong><?php _e('Comparación de características','wp-accessibility-helper'); ?></strong>
                         </a>
                     </p>
                 </div>
                 <div class="pro-button">
                     <a href="<?php echo WAHPRO_LINK; ?>?from=wahfree" target="_blank" class="button">
-                        <?php _e('Upgrade to PRO','wp-accessibility-helper'); ?>
+                        <?php _e('Actualizar a PRO','wp-accessibility-helper'); ?>
                     </a>
                 </div>
             </div>

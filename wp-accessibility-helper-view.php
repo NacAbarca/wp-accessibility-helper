@@ -1,7 +1,7 @@
 <?php if( !wah_analyzer_isset() ) :
     $icon = get_option('wah_image_url') ? get_option('wah_image_url') : plugins_url().'/wp-accessibility-helper/assets/images/accessibility-48.jpg';
-    $close_button_title = get_option('wah_close_button_title') ? get_option('wah_close_button_title'): __("Close","wp-accessibility-helper");
-    $wah_clear_cookies_title = get_option('wah_clear_cookies_title') ? get_option('wah_clear_cookies_title') : __("Clear cookies","wp-accessibility-helper");
+    $close_button_title = get_option('wah_close_button_title') ? get_option('wah_close_button_title'): __("Cerrar","wp-accessibility-helper");
+    $wah_clear_cookies_title = get_option('wah_clear_cookies_title') ? get_option('wah_clear_cookies_title') : __("Eliminar cacher","wp-accessibility-helper");
     $wah_on_off_title = get_option('wah_on_off_title') ? get_option('wah_on_off_title') : __("ON/OFF","wp-accessibility-helper");
     $wah_darktheme_enable = get_option('wah_darktheme_enable');
     $dark_theme_class = 'light_theme';
@@ -13,12 +13,10 @@
     <!-- WP Accessibility Helper (WAH) - https://wordpress.org/plugins/wp-accessibility-helper/ -->
 	<!-- Official plugin website - https://accessibility-helper.co.il -->
         <?php do_action('before_wah_wrapper'); ?>
-            <button type="button" class="wahout aicon_link"
-                accesskey="<?php echo apply_filters( 'wah_open_accesskey', 'z' ); ?>"
-                aria-label="<?php _e("Accessibility Helper sidebar","wp-accessibility-helper"); ?>"
-                title="<?php _e("Accessibility Helper sidebar","wp-accessibility-helper"); ?>">
+            <button type="button" class="wahout aicon_link" accesskey="<?php echo apply_filters( 'wah_open_accesskey', 'z' ); ?>" aria-label="<?php _e("Barra de accesibilidad","wp-accessibility-helper"); ?>"
+                title="<?php _e("Barra de accesibilidad","wp-accessibility-helper"); ?>">
                 <img src="<?php echo apply_filters( 'wah_icon_url', $icon ); ?>"
-                    alt="<?php _e("Accessibility","wp-accessibility-helper"); ?>" class="aicon_image" />
+                    alt="<?php _e("Accesibilidad","wp-accessibility-helper"); ?>" class="aicon_image" />
             </button>
             <div id="access_container" aria-hidden="false">
                 <button tabindex="-1" type="button" class="close_container wahout"

@@ -136,10 +136,19 @@ jQuery(document).ready(function(){
     });
 
     //enable rel="link"
-    if( typeof roleLink != 'undefined' && roleLink == 1 ) {
-      $body_link.each(function(){
-        jQuery(this).attr("role","link");
-      });
+    if( typeof roleLink !='undefined' && roleLink == 1 ) {
+        setTimeout( function(){
+            $body_link.each(function(){
+                var link_element = jQuery(this);
+                if( typeof Foundation !='undefined' && typeof Foundation.version !='undefined' && Foundation.version ){
+                    if( link_element.attr('role') != 'tab' ){
+                        link_element.attr("role","link");
+                    }
+                } else {
+                    link_element.attr("role","link");
+                }
+            });
+        }, 500);
     }
 
     //remove link title attribute
