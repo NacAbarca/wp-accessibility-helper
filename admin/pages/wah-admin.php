@@ -194,32 +194,32 @@
                 <div class="form_element_content">
 
                     <?php render_switch_element(
-                    __("Enable skip links menu?","wp-accessibility-helper"),
+                    __("¿Habilitar el menú saltar enlaces?","wp-accessibility-helper"),
                     $wah_skiplinks_setup, "wah_skiplinks_setup");
                     ?>
                     <h5 class="wah-property-description">
-                        You can manage Skiplinks menu <a href="<?php echo admin_url().'nav-menus.php'; ?>">HERE</a>
+                        Puedes gestionar el menú de Skiplinks <a href="<?php echo admin_url().'nav-menus.php'; ?>">AQUÍ</a>
                     </h5>
                     <h5 class="wah-property-description">
-                        You can manage Skiplinks css <a href="<?php echo menu_page_url( 'wp_accessibility_landmark', false ); ?>">HERE</a>
+                        Puedes gestionar Skiplinks css <a href="<?php echo menu_page_url( 'wp_accessibility_landmark', false ); ?>">AQUÍ</a>
                     </h5>
                     <hr />
 
                     <?php render_switch_element(
-                    __("Enable keyboard navigation","wp-accessibility-helper"),
+                    __("Habilitar la navegación del teclado","wp-accessibility-helper"),
                     $wah_keyboard_navigation_setup, "wah_keyboard_navigation_setup");
                     ?>
 
                     <?php render_title_element(
-                        __("Keyboard navigation - title","wp-accessibility-helper"),
+                        __("Teclado de navegación - Título","wp-accessibility-helper"),
                         $wah_keyboard_navigation_title, "wah_keyboard_navigation_title", "", "wah_keyboard_navigation_setup"
                     ); ?>
                     <hr />
 
-                    <?php render_switch_element(__("Enable Dark Theme?","wp-accessibility-helper"),$wah_darktheme_enable,"wah_darktheme_enable"); ?>
+                    <?php render_switch_element(__("¿Habilitar tema oscuro?","wp-accessibility-helper"),$wah_darktheme_enable,"wah_darktheme_enable"); ?>
                     <hr />
-                    <?php render_title_element(__("Close button - title","wp-accessibility-helper"),$close_button_title,"wah_close_button_title"); ?>
-                    <?php render_title_element(__("Clear cookies - title","wp-accessibility-helper"),$wah_clear_cookies_title,"wah_clear_cookies_title"); ?>
+                    <?php render_title_element(__("Botón de cierre - Título","wp-accessibility-helper"),$close_button_title,"wah_close_button_title"); ?>
+                    <?php render_title_element(__("Borrar Caches - Título","wp-accessibility-helper"),$wah_clear_cookies_title,"wah_clear_cookies_title"); ?>
                 </div>
 
                 <hr />
@@ -403,7 +403,7 @@
         $('#upload-btn').click(function(e) {
             e.preventDefault();
             var image = wp.media({
-                title: 'Upload Logo',
+                title: 'Subir Logo',
                 // mutiple: true if you want to upload multiple files at once
                 multiple: false
             }).open()

@@ -3,7 +3,7 @@ Contributors: vol4ikman, nivnoiman
 Donate link: http://volkov.co.il/wp-accessibility-helper/
 Tags: access,accessibility,accessible,plugin,sidebar,a11y,contrast,fonts,aria,WAI,נגישות,הנגשת אתר,wordpress accessible,WordPress Accessibility,WCAG,wcag,WAH
 Requires at least: 4.0.1
-Tested up to: 4.9
+Tested up to: 5.0
 Requires PHP: 5.3
 Stable tag: 0.5
 License: GPLv2 or later
@@ -131,6 +131,13 @@ Official WP Accessibility Helper Documentation here: <a href="https://accessibil
 11. WP Accessibility Helper - Font reset button when script base option selected
 
 == Changelog ==
+
+= 0.5.8.9 - [15 Jul 2018] =
+* JS error fixes and js code optimization
+
+= 0.5.8.8 - [15 Jul 2018] =
+* PHP improvements & bug fixes
+* Foundation tabs JS conflict has been fixed
 
 = 0.5.8.7 - [28 Mar 2018] =
 * PHP improvements & bug fixes

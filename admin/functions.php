@@ -495,7 +495,7 @@ function wah_render_admin_sidebar() {
         <div class="wah-admin-sidebar-inner">
             <div class="pro-button">
                 <a href="<?php echo WAHPRO_LINK; ?>?from=wahfree" target="_blank" class="button">
-                    <?php _e('Upgrade to PRO','wp-accessibility-helper'); ?>
+                    <?php _e('Actualizar a PRO','wp-accessibility-helper'); ?>
                 </a>
             </div>
             <div class="features-list">

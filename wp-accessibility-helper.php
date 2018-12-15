@@ -4,7 +4,7 @@
     Plugin URI: https://accessibility-helper.co.il/
     Description: WP Accessibility Helper sidebar
     Author: Alex Volkov
-    Version: 0.5.8.7
+    Version: 0.5.8.9
     Author URI: http://www.volkov.co.il
     License: GPL2
     License URI: https://www.gnu.org/licenses/gpl-2.0.html
